@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2022-03-26T06:29:14.787Z</updated>
+  <updated>2022-04-01T13:24:22.355Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,26 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux常用命令(一)</title>
+    <link href="http://example.com/2022/04/01/Linux/"/>
+    <id>http://example.com/2022/04/01/Linux/</id>
+    <published>2022-04-01T12:23:38.000Z</published>
+    <updated>2022-04-01T13:24:22.355Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="关机-x2F-重启-x2F-注销"><a href="#关机-x2F-重启-x2F-注销" class="headerlink" title="关机&#x2F;重启&#x2F;注销"></a>关机&#x2F;重启&#x2F;注销</h2><pre><code class="bash">shutdown -h now                        即刻关机shutdown -h 10                         10分钟后关机shutdown -h 11:00                      11:00关机shutdown -h +10                        预定时间关机(十分钟后)shutdown -c                            取消指定时间关机shutdown -r now                        重启shutdown -r 10                         十分钟后重启shutdown -r 11:00                      定时重启reboot                                 重启init 6                                 重启init 0                                 立刻关机telinit    0                           关机poweroff                              立刻关机halt                                  关机    sync                                  buff数据同步到磁盘logout                                退出登录Shell</code></pre><h2 id="系统信息和性能查看"><a href="#系统信息和性能查看" class="headerlink" title="系统信息和性能查看"></a>系统信息和性能查看</h2><pre><code class="bash">uname -a                             查看内核/OS/CPU信息uname -r                             查看内核版本uname -m                             查看处理器架构arch                                 查看处理器架构hostname                             查看计算机名who                                  显示当前登录系统的用户who am i                             显示登录时的用户名whoami                               显示当前用户名cat /proc/version                    查看linux版本信息car /proc/cpuinfo                    查看CPU信息cat /proc/interrupts                 查看中断cat /proc/loadavg                    查看系统负载uptime                               查看系统运行时间、用户数、负载env                                  查看系统的环境变量lsusb -tv                            查看系统USB设备信息lspci -tv                            查看系统PCI设备信息lsmod                                查看已加载的系统模块grep MemTotal /proc/meminfo          查看内存总量grep MemFree /proc/meminfo           查看空闲内存量free -m                              查看内存用量和交换区用量date                                 显示系统日期时间cal 2021                             显示2021日历表top                                  动态显示cpu/内存/进程等情况vmstat 1 20                          每1秒采一次系统状态，采20次iostat                               查看io读写/cpu使用情况sar -u 1 10                          查看cpu使用情况 (1秒一次，共10次)sar -d 1 10                          查询磁盘性能</code></pre><h2 id="磁盘和分区"><a href="#磁盘和分区" class="headerlink" title="磁盘和分区"></a>磁盘和分区</h2><pre><code class="bash">fdisk -l                              查看所有磁盘分区swapon -s                             查看所有交换分区df -h                                 查看磁盘使用情况及挂载点df -hl                                同上du -sh /dir                           查看指定某个目录的大小du -sk * | sort -rn                   从高到低依次显示文件和目录大小mount /dev/hda2 /mnt/hda2             挂载hda2盘mount -t ntfs /dev/sdc1 /mnt/usbhd1   指定文件系统类型挂载(如ntfs)mount -o loop xxx.iso /mnt/cdrom      挂载iso文件mount /dev/sda1 /mnt/usbdisk          挂载usb盘/闪存设备umount -v /dev/sda1                   通过设备名卸载umount -v /mnt/mymnt                  通过挂载点卸载fuser -km /mnt/hda1                   强制卸载 (慎用)</code></pre>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h2 id=&quot;关机-x2F-重启-x2F-注销&quot;&gt;&lt;a href=&quot;#关机-x2F-重启-x2F-注销&quot; class=&quot;headerlink&quot; title=&quot;关机&amp;#x2F;重启&amp;#x2F;注销&quot;&gt;&lt;/a&gt;关机&amp;#x2F;重启&amp;#x2F;注销&lt;/h2&gt;&lt;pre&gt;&lt;code cl</summary>
+      
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>从0到1，搭建个人博客</title>
